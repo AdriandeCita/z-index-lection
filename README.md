@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# Playground for demoing how CSS's z-index works
+
+This is a webpage I used once for showing how the CSS works, live in browser. It consists of a set of screens, each containing several draggable blocks.
+
+![Preview](./preview.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
