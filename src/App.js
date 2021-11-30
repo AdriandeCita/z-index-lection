@@ -1,23 +1,47 @@
-import logo from './logo.svg';
 import './App.css';
+import Section from './components/section';
+import ZBlock from './components/z-block';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <p>Z-index playground</p>
       </header>
+      {/* First section ----------------------------------------------- */}
+      <Section title="Simple flow">
+        <ZBlock z={2} />
+        <ZBlock />
+        <ZBlock />
+      </Section>
+      {/* Second section ---------------------------------------------- */}
+      <Section title="Simple flow (with flexbox)" flex>
+        <ZBlock z={2} />
+        <ZBlock z={1} />
+        <ZBlock />
+      </Section>
+      {/* Third section ----------------------------------------------- */}
+      <Section title="With container">
+        <ZBlock>
+          <ZBlock z={2} />
+          <ZBlock />
+          <ZBlock />
+        </ZBlock>
+        <ZBlock />
+      </Section>
+      {/* Fourth section ---------------------------------------------- */}
+      <Section title="With two containers" flex>
+        <ZBlock>
+          <ZBlock z={2} />
+          <ZBlock />
+          <ZBlock />
+        </ZBlock>
+        <ZBlock>
+          <ZBlock z={2} />
+          <ZBlock />
+          <ZBlock />
+        </ZBlock>
+      </Section>
     </div>
   );
 }
